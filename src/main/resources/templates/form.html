@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmnls:th="//www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}">Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+		<a class="navbar-brand" href="#">Superheroes</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link" href="#">Home
+				</a></li>
+				<li class="nav-item"><a class="nav-link" th:href="@{/listar}">Superheroes</a>
+				</li>
+
+
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+	
+	
+	<h1 th:text="${titulo}"></h1>
+
+	<form th:action="@{/form}" th:object="${superheroe}" method="post">
+
+
+
+
+
+		<div class="form-group">
+			<label class="col-sm-2 col-form-label">NOMBRE</label>
+			<div class="col-sm-6">
+				<input type="text" th:field="*{nombre}" class="form-control" th:errorclass="'form-control alert-danger'" />
+				
+			</div>
+		</div>
+
+
+
+
+		<div class="form-group">
+			<label class="col-sm-2 col-form-label">BIO</label>
+			<div class="col-sm-6">
+				<input type="text" th:field="*{bio}" class="form-control" />
+					</div>
+		</div>
+
+
+		<div class="form-group">
+			<label class="col-sm-2 col-form-label">IMAGEN</label>
+			<div class="col-sm-6">
+				<input type="text" th:field="*{img}" class="form-control" />
+	
+				
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-2 col-form-label">FECHA APARICION</label>
+			<div class="col-sm-6">
+				<input type="text" th:field="*{aparicion}" class="form-control"  />
+				
+			</div>
+		</div>
+		
+
+		<div class="form-group">
+			<input class="btn btn-primary mt-3" type="submit" value="Crear Superheroe" />
+
+		</div>
+
+
+
+		<input type="hidden" th:field="*{id}" />
+	</form>
+	</div>
+</body>
+</html>
