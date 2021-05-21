@@ -1,34 +1,11 @@
 <!DOCTYPE html>
 <html xmnls:th="//www.thymeleaf.org">
-<head>
-<meta charset="UTF-8" />
-<title th:text="${titulo}">Insert title here</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-	crossorigin="anonymous">
+<head th:replace="layout/layout :: head">
+
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
-		<a class="navbar-brand" href="#">Superheroes</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-				</a></li>
-				<li class="nav-item"><a class="nav-link" th:href="@{/listar}">Superheroes</a>
-				</li>
-
-
-			</ul>
-		</div>
-	</nav>
+	<header th:replace="layout/layout :: header"></header>
 	<div class="container">
 	
 	
@@ -87,5 +64,6 @@
 		<input type="hidden" th:field="*{id}" />
 	</form>
 	</div>
+	<footer th:replace="layout/layout :: footer"></footer>
 </body>
 </html>
