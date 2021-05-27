@@ -1,3 +1,3 @@
 /* Populate tables */
-INSERT INTO superheroes (id, nombre, bio, img, fecha_aparicion) VALUES(1, 'Nombre', 'Bio de Wolverine', 'imagen de wolverine', '2017-08-28');
-INSERT INTO superheroes (id, nombre, bio, img, fecha_aparicion) VALUES(2, 'Nombre de otro', 'Bio de otro', 'imagen de otro', '2018-09-27');
+INSERT INTO superheroes (id, nombre, bio, img, fecha_aparicion) VALUES(1, 'Aquaman', 'El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.', 'assets/img/aquaman.png', '1941-11-01');
+INSERT INTO superheroes (id, nombre, bio, img, fecha_aparicion) VALUES(2, 'Batman', 'Los rasgos principales de Batman se resumen en «destreza física, habilidades deductivas y obsesión». La mayor parte de las características .', 'assets/img/batman.png', '1939-05-01');
